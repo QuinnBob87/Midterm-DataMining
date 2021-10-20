@@ -1,0 +1,35 @@
+#Data Mining Midterm Pandas Cheat Sheet
+
+# open csv:
+pd.read_csv('name.csv')
+
+# print first and last 5 rows
+df.head()
+
+# print each row (iloc is for numbers of dataframe, whichcan also punt a location using iloc[4,1])
+print(df.iloc[1:4])
+# or
+for index, row in df.iterrows():
+  print(index, row['Name'])
+# print column if condition
+df.loc[df['column_name'] =='condition']
+
+# DESCRIBE GIVES A TON OF INFORMATION
+df.describe()
+
+# Sorting Information
+df.sort_values("column_name", ascending='False')
+# or for multiple values(1=increasing; 0=decreasing)
+df.sort_values(["Type 1", 'HP'], ascending=[1,0])
+
+# combining columns
+df['new'] = df['column1'] + df['column1']
+
+# removing a column
+df=df.drop(columns['remove_me']
+
+#export file
+df.to_csv('modified.csv', index=False)
+df.to_excel('modified.xlsx', index=False)
+df.to_csv('modified.txt', index=False, sep='\t')
+
