@@ -1,0 +1,22 @@
+# imports recquired
+from sklearn.linear_model import LinearRegression
+import matplotlib as mp
+
+# create a random array
+x = np.random.rand(100)
+# or
+y = np.random.rand(10,20)
+
+# change shape of an array
+x = x.reshape(-1,1)
+
+# create a scatter plot
+# this takes in two arrays, in this case its x and y
+mp.pyplot.scatter(x,y)
+
+# creates a line of best fit
+xy_model = LinearRegression().fit(x,y)
+
+# creates a lin reg score
+# must have a line of best fit
+xy_model.score(x,y)
