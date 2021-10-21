@@ -33,3 +33,11 @@ df.to_csv('modified.csv', index=False)
 df.to_excel('modified.xlsx', index=False)
 df.to_csv('modified.txt', index=False, sep='\t')
 
+# create a datafram from other columns
+popData2 = popData.melt(id_vars=['NAME'], var_name="Calendar Year", value_name="Population")
+
+# change data type
+popData2 = popData2.astype({'Column_Name' : 'int64'})
+
+# combining data frames
+MERGED = taxData.merge(popData2, left_on=["Town", "Calendar Year"], right_on=["NAME", "Calendar Year"], how='inner')
