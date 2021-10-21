@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+iris = pd.read_csv('irisdata.csv')
+iris['sepal_length'] = iris['sepal_length'].replace({'$':''})
+iris['sepal_width'] = iris['sepal_width'].replace({'%':''})
+iris = iris.astype({'sepal_width' : 'int64'})
+iris = iris.astype({'sepal_length' : 'int64'})
+iris = iris.astype({'petal_length' : 'int64'})
+iris = iris.astype({'species' : 'string'})
+iris = iris.astype({'petal_width' : 'float'})
+iris = iris.astype({'ID' : 'float'})
+df.sort_values("ID", ascending='True;)
