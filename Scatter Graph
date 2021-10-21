@@ -1,6 +1,9 @@
 # imports recquired
 from sklearn.linear_model import LinearRegression
 import matplotlib as mp
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+
 
 # create a random array
 x = np.random.rand(100)
@@ -20,3 +23,11 @@ xy_model = LinearRegression().fit(x,y)
 # creates a lin reg score
 # must have a line of best fit
 xy_model.score(x,y)
+
+# create a function for the line of best fit
+modeled_y = xy_model.predict(x)
+
+# add line into a graph
+# in this case we add our line of best fit
+mp.pyplot.plot(x,modeled_y)
+
