@@ -1,0 +1,32 @@
+# .isna detects wether a value is na or not
+df.isna()
+#outcome:
+"""
+     age   born   name    toy
+0  False   True  False   True
+1  False  False  False  False
+2   True  False  False  False
+"""
+
+# organize by column
+FlickrData.set_index('Identifier', inplace=True)
+
+# set to a numeric value
+pd.to_numeric(FlickrDataExtr)
+
+# regex
+regex = r'^(\d{4})'
+
+# detect missing values
+data['column'].isnull()
+
+# if it contains will return true or false or index
+oxford = FlickerDataPop.str.contains('Oxford')
+
+# how to use open
+with open('text.txt') as file:
+  for line in file:
+    if '[edit]' in line:
+      state = line 
+    else:
+      university_towns.append((state, line))
